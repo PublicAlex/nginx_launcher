@@ -26,12 +26,10 @@ services:
       - db
 
   db:
-    image: 'mysql:latest'
+    image: 'mysql:5.7'
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: 'temproot1234'
       MYSQL_DATABASE: 'temp_name'
-      MYSQL_USER: 'root'
-      MYSQL_PASSWORD: 'temproot1234'
     volumes:
       - ./mysql:/var/lib/mysql
